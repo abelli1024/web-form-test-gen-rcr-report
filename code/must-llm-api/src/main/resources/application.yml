@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: must-llm-api
+  freemarker:
+    check-template-location: false
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  messages:
+    basename: message
+  mvc:
+    throw-exception-if-no-handler-found: true
+
+mybatis:
+  type-aliases-package: mo.must.**.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+mapper:
+  mappers:
+    - mo.must.chat.common.config.MyMapper
+  not-empty: false
+  identity: MYSQL

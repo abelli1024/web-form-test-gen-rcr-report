@@ -1,0 +1,20 @@
+services:
+  webapp:
+    build: .
+    image: bank_web-webapp:latest
+    container_name: bank_web-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/must_test_bank?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+    volumes:
+      - ./config:/config
+    networks:
+      - web-gui-net
+    restart: always
+
+networks:
+  web-gui-net:
+    external: true

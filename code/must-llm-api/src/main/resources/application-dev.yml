@@ -1,0 +1,26 @@
+server:
+  address: 0.0.0.0
+  port: 8081
+logging:
+  level:
+    org.springframework.web: INFO
+    com.chatgpt.dao: DEBUG
+  file:
+    path: logs/
+
+spring:
+  datasource:
+    url: jdbc:mysql://mysql-db:3306:3306/must_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      stat-view-servlet.allow: true
+
+custom:
+  work-id: 1
+  data-center-id: 1
