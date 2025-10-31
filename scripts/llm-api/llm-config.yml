@@ -1,0 +1,57 @@
+llm:
+  configs:
+    - model: gpt-3.5-turbo
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.openai.com/v1/chat/completions
+    - model: gpt-4
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.openai.com/v1/chat/completions
+    - model: Baichuan2-Turbo
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.baichuan-ai.com/v1/chat/completions
+    - model: Spark_v3
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://spark-api.xf-yun.com/v3.1/chat
+    - model: Spark_v3.5
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://spark-api.xf-yun.com/v3.5/chat
+    - model: glm-4
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+    - model: glm-4v
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+    - model: glm-3-turbo
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://open.bigmodel.cn/api/paas/v4/chat/completions
+    - model: llama-2-7b-chat
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.replicate.com/v1/models/meta/llama-2-7b-chat/predictions
+    - model: llama-2-13b-chat
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.replicate.com/v1/models/meta/llama-2-13b-chat/predictions
+    - model: llama-2-70b-chat
+      appid:
+      apiKey:
+      apiSecret:
+      url: https://api.replicate.com/v1/models/meta/llama-2-70b-chat/predictions

@@ -1,0 +1,17 @@
+services:
+  llm-api:
+    build: .
+    image: llm-api:latest
+    container_name: llm-api
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/must_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 123456
+    networks:
+      - web-gui-net
+
+networks:
+  web-gui-net:
+    external: true
