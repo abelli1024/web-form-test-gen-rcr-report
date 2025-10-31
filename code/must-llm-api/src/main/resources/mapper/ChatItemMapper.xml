@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="mo.must.chat.dao.ChatItemDAO">
+    <select id="getChatItemList" resultType="mo.must.chat.model.ChatItemDO" parameterType="mo.must.chat.dto.ChatItemDTO">
+        SELECT * FROM t_chat_item WHERE  id>#{preId} AND `status`= 0
+        ORDER BY id ASC LIMIT 0,#{pageSize}
+    </select>
+
+    <select id="getChatItems" resultType="mo.must.chat.model.ChatItemDO" parameterType="mo.must.chat.dto.ChatItemDTO">
+        SELECT * FROM t_chat_item WHERE  session_id =#{sessionId} AND `status`= 0
+        ORDER BY id DESC
+    </select>
+</mapper>
