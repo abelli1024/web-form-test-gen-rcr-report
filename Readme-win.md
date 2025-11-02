@@ -17,7 +17,7 @@ The following instructions use **Window 11** as an example.
 
 ### 1. Install Git LFS
 
-Git LFS (Large File Storage) must be installed to correctly clone all required project files.
+Git LFS (Large File Storage) must be installed to clone all required project files correctly.
 
 Install Git LFS via Homebrew:
 ```bash
